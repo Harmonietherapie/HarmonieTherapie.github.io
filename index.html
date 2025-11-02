@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harmonie Thérapie - Coaching</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
   <style>
     body{margin:0;font-family:"Lato","Helvetica Neue",Arial,sans-serif;background:#f9f5f6;color:#444;line-height:1.6}
-    header{background:#e7e2dd;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+    header{background:#e7e2dd;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
     header h1{margin:0;font-size:22px;color:#333;font-weight:600}
     .logo-wrapper{display:flex;align-items:center;gap:10px}
     .logo{height:34px;width:auto;border-radius:4px}
     nav{display:flex;gap:15px}
     nav a{text-decoration:none;color:#555;font-weight:500;transition:color .3s}
     nav a:hover{color:#a67856}
-    .menu-toggle{display:none;flex-direction:column;cursor:pointer}
+    .menu-toggle{display:none;flex-direction:column;cursor:pointer;background:transparent;border:0;padding:6px}
     .menu-toggle span{background:#333;height:3px;margin:4px 0;width:25px;border-radius:3px}
     @media (max-width:768px){
-      nav{display:none;flex-direction:column;position:absolute;top:60px;right:20px;background:#e7e2dd;padding:10px 20px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+      nav{display:none;flex-direction:column;position:absolute;top:60px;right:20px;background:#e7e2dd;padding:12px 18px;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.12);z-index:200}
+      nav a{padding:8px 0}
       nav.active{display:flex}
       .menu-toggle{display:flex}
     }
+
     section{padding:60px 20px;max-width:1000px;margin:auto}
     section h2{font-size:26px;margin-bottom:20px;color:#333;text-align:center}
     .hero{text-align:center;padding:80px 20px;background:#f1ece8}
@@ -58,19 +60,19 @@
     <h1>Harmonie Thérapie</h1>
   </div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <button class="menu-toggle" aria-controls="nav" aria-expanded="false" onclick="toggleMenu()" title="Ouvrir le menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 
   <nav id="nav" aria-label="Navigation principale">
-  <a href="#accueil">Accueil</a>
-  <a href="#apropos">À propos</a>
-  <a href="therapie.html">Thérapie TCC</a>
-  <a href="mystery.html">Mystery Shopping</a>
-  <a href="scolaire.html">Interventions scolaires</a>
-  <a href="contact.html">Contact</a>
-  <a href="rgpd.html">RGPD</a>
-</nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="therapie.html">Thérapie TCC</a>
+    <a href="mystery.html">Mystery Shopping</a>
+    <a href="scolaire.html">Interventions scolaires</a>
+    <a href="contact.html">Contact</a>
+    <a href="rgpd.html">RGPD</a>
+  </nav>
 </header>
 
 <!-- 🌿 INTRO -->
@@ -141,24 +143,30 @@
   <p style="text-align:center;margin-top:20px;">
     <a href="https://calendly.com/srhmichaux/30min?locale=fr" target="_blank"
        style="padding:10px 20px;background:#c5b8a5;color:#fff;text-decoration:none;border-radius:5px;">
-      Réserver via Calendly
+       Réserver via Calendly
     </a>
   </p>
 </section>
 
 <footer>
-  &copy; 2025 Harmonie Thérapie — Tous droits réservés
+  © 2025 Harmonie Thérapie — Tous droits réservés<br>
+  <a href="mailto:srhmcx@outlook.be" style="color:#6b584a;text-decoration:none;">srhmcx@outlook.be</a> ·
+  <a href="rgpd.html" style="color:#6b584a;text-decoration:none;">Politique RGPD</a>
 </footer>
 
 <script>
   function toggleMenu(){
     const nav = document.getElementById('nav');
-    nav.classList.toggle('active');
+    const btn = document.querySelector('.menu-toggle');
+    const isOpen = nav.classList.toggle('active');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 </script>
 
 </body>
 </html>
+
+
 
 
 
