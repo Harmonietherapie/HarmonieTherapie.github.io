@@ -1,38 +1,97 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home Organizing – Harmonie Thérapie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=9" />
+  <style>
+    /* mêmes styles que index.html */
+    body{margin:0;font-family:"Lato","Helvetica Neue",Arial,sans-serif;background:#f9f5f6;color:#444;line-height:1.6}
+    header{background:#e7e2dd;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+    header h1{margin:0;font-size:22px;color:#333;font-weight:600}
+    .logo-wrapper{display:flex;align-items:center;gap:10px}
+    .logo{height:34px;width:auto;border-radius:4px}
+    nav{display:flex;gap:15px}
+    nav a{text-decoration:none;color:#555;font-weight:500;transition:color .3s}
+    nav a:hover{color:#a67856}
+    .menu-toggle{display:none;flex-direction:column;cursor:pointer;background:transparent;border:0;padding:6px}
+    .menu-toggle span{background:#333;height:3px;margin:4px 0;width:25px;border-radius:3px}
+    @media (max-width:768px){
+      nav{display:none;flex-direction:column;position:absolute;top:60px;right:20px;background:#e7e2dd;padding:12px 18px;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.12);z-index:200}
+      nav a{padding:8px 0}
+      nav.active{display:flex}
+      .menu-toggle{display:flex}
+    }
+    section{padding:60px 20px;max-width:1000px;margin:auto}
+    section h2{font-size:26px;margin-bottom:20px;color:#333;text-align:center}
+    .hero{text-align:center;padding:80px 20px;background:#f1ece8}
+    .hero h2{font-size:32px;color:#2e2e2e;margin:0 0 10px}
+    .hero p{font-size:18px;max-width:760px;margin:10px auto 0}
+    ul{padding-left:20px}
+    footer{background:#e7e2dd;text-align:center;padding:20px;margin-top:40px;font-size:14px;color:#666}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1 style="text-align:center;margin-top:40px;">Home Organizing</h1>
-  </header>
 
-  <main style="max-width:900px;margin:40px auto;padding:0 16px;">
-    <p>Parce qu’une maison en ordre, c’est souvent un esprit apaisé 🌿 Le Home Organizing permet de retrouver de la fluidité, de la légèreté et du plaisir dans son quotidien.</p>
+<header class="site-header">
+  <div class="logo-wrapper">
+    <img src="/logo.jpeg" alt="Harmonie Thérapie" class="logo" />
+    <h1>Harmonie Thérapie</h1>
+  </div>
+  <button class="menu-toggle" aria-controls="nav" aria-expanded="false" onclick="toggleMenu()" title="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="nav" aria-label="Navigation principale">
+    <a href="/index.html#accueil">Accueil</a>
+    <a href="/index.html#apropos">À propos</a>
+    <a href="/therapie.html">Thérapie TCC</a>
+    <a href="/entreprise.html">Coaching en entreprise</a>
+    <a href="/home-organizing.html">Home Organizing</a>
+    <a href="/mystery.html">Mystery Shopping</a>
+    <a href="/scolaire.html">Interventions scolaires</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/rgpd.html">RGPD</a>
+  </nav>
+</header>
 
-    <h2>🧺 Objectif</h2>
-    <p>L’idée n’est pas de viser la perfection, mais de créer un intérieur qui <strong>soutient votre rythme de vie</strong> et favorise la sérénité. Ensemble, nous repensons vos espaces, vos routines et vos priorités.</p>
+<section class="hero">
+  <h2>Home Organizing</h2>
+  <p>Remettre de l’ordre dans la maison pour libérer l’esprit et le quotidien.</p>
+</section>
 
-    <h2>🌸 Prestations proposées</h2>
-    <ul>
-      <li>Tri et désencombrement bienveillant</li>
-      <li>Organisation des pièces de vie, du dressing ou du bureau</li>
-      <li>Création de routines simples pour le quotidien</li>
-      <li>Accompagnement spécial mamans débordées</li>
-    </ul>
+<main style="max-width:1000px;margin:40px auto;padding:0 16px;">
+  <h2>🌿 Esprit</h2>
+  <p>Pas de perfection, pas de pression. On crée des espaces simples à vivre, qui soutiennent votre rythme et apaisent la charge mentale.</p>
 
-    <h2>📦 Formules</h2>
-    <p>Des prestations adaptées à vos besoins : à l’heure, à la demi-journée ou en forfaits sur plusieurs jours. Retrouvez le détail complet des tarifs sur demande ou via la page <a href="/contact.html">Contact</a>.</p>
+  <h2>🧺 Prestations</h2>
+  <ul>
+    <li>Tri et désencombrement bienveillant</li>
+    <li>Organisation des pièces de vie, dressings, buanderies, bureaux</li>
+    <li>Mise en place de routines et systèmes faciles à maintenir</li>
+    <li>Accompagnement spécial mamans débordées</li>
+  </ul>
 
-    <p style="margin-top:30px;">💬 Chaque mission est unique — ensemble, faisons de votre maison un lieu où l’énergie circule à nouveau.</p>
-  </main>
+  <h2>📦 Formules</h2>
+  <p>À l’heure, demi-journée, journée ou forfaits multi-jours. Demande simple via <a href="/contact.html">la page Contact</a>.</p>
 
-  <footer style="text-align:center;margin:60px 0 20px;color:#666;">
-    © 2025 Harmonie Thérapie
-  </footer>
+  <p style="margin-top:28px;text-align:center;">
+    <a href="/contact.html" class="cta" style="display:inline-block;padding:12px 18px;border-radius:10px;background:#a67856;color:#fff;text-decoration:none;font-weight:700;">Demander un diagnostic</a>
+  </p>
+</main>
+
+<footer>
+  © 2025 Harmonie Thérapie — Tous droits réservés · <a href="mailto:srhmcx@outlook.be" style="color:#6b584a;text-decoration:none;">srhmcx@outlook.be</a>
+</footer>
+
+<script>
+  function toggleMenu(){
+    const nav = document.getElementById('nav');
+    const btn = document.querySelector('.menu-toggle');
+    const isOpen = nav.classList.toggle('active');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+</script>
 </body>
 </html>
