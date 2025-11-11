@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css?v=9" />
   <style>
-    /* === mêmes styles que index.html pour homogénéité === */
+    /* ——— Base harmonisée avec l'accueil ——— */
     body{margin:0;font-family:"Lato","Helvetica Neue",Arial,sans-serif;background:#f9f5f6;color:#444;line-height:1.6}
     header{background:#e7e2dd;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
     header h1{margin:0;font-size:22px;color:#333;font-weight:600}
@@ -30,14 +30,19 @@
     .hero h2{font-size:32px;color:#2e2e2e;margin:0 0 10px}
     .hero p{font-size:18px;max-width:760px;margin:10px auto 0}
     ul{padding-left:20px}
-    footer{background:#e7e2dd;text-align:center;padding:20px;margin-top:40px;font-size:14px;color:#666}
+
+    /* ——— Styles tarifs (mêmes que HO) ——— */
     .pricing{max-width:1000px;margin:40px auto;padding:0 16px}
-.price-grid{display:grid;gap:14px}
-@media(min-width:760px){.price-grid{grid-template-columns:repeat(2,1fr)}}
-.price-item{background:#fff;border:1px solid #eadfd8;border-radius:12px;padding:16px}
-.price-item h3{margin:0 0 6px 0;font-size:18px;color:#2e2e2e}
-.price-item p{margin:0 0 6px 0}
-.badge{display:inline-block;padding:3px 8px;border-radius:999px;background:#ded7cf;font-size:12px;font-weight:700;margin-top:6px}
+    .price-grid{display:grid;gap:14px}
+    @media(min-width:760px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+    .price-item{background:#fff;border:1px solid #eadfd8;border-radius:12px;padding:16px}
+    .price-item h3{margin:0 0 6px 0;font-size:18px;color:#2e2e2e}
+    .price-item p{margin:0 0 6px 0}
+    .price{font-weight:700}
+    .badge{display:inline-block;padding:3px 8px;border-radius:999px;background:#ded7cf;font-size:12px;font-weight:700;margin-top:6px}
+
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:#a67856;color:#fff;text-decoration:none;font-weight:700}
+    footer{background:#e7e2dd;text-align:center;padding:20px;margin-top:40px;font-size:14px;color:#666}
   </style>
 </head>
 <body>
@@ -66,6 +71,9 @@
 <section class="hero">
   <h2>Coaching en entreprise</h2>
   <p>Des managers alignés, des équipes sereines, une performance durable.</p>
+  <p style="margin-top:18px">
+    <a href="#tarifs-ent" class="cta">Voir les tarifs</a>
+  </p>
 </section>
 
 <main style="max-width:1000px;margin:40px auto;padding:0 16px;">
@@ -82,46 +90,67 @@
 
   <h2>📅 Modalités</h2>
   <p>En individuel ou en petit groupe, <strong>en présentiel ou à distance</strong>. Un premier échange permet d’évaluer les besoins et de définir un accompagnement sur mesure.</p>
-<section class="pricing" aria-labelledby="tarifs-ent">
-  <h2 id="tarifs-ent" style="text-align:center">💶 Tarifs & formules (sur devis)</h2>
 
-  <div class="price-grid">
-    <div class="price-item">
-      <h3>Coaching individuel de managers</h3>
-      <p>Parcours personnalisé (séances de 60–90 min, en présentiel ou visio). Bilan de départ et plan d’action.</p>
-      <span class="badge">Sur devis</span>
+  <!-- 💶 SECTION TARIFS ENTREPRISE -->
+  <section class="pricing" aria-labelledby="tarifs-ent">
+    <h2 id="tarifs-ent" style="text-align:center">💶 Tarifs & formules</h2>
+
+    <div class="price-grid">
+      <div class="price-item">
+        <h3>Séance individuelle</h3>
+        <p>Coaching de dirigeant / manager (visio ou présentiel)</p>
+        <p class="price">120 € / séance</p>
+      </div>
+
+      <div class="price-item">
+        <h3>Parcours “Leadership & équilibre”</h3>
+        <p>5 séances individuelles (1h30) + bilan écrit</p>
+        <p class="price">550 €</p>
+      </div>
+
+      <div class="price-item">
+        <h3>Atelier d’équipe — ½ journée</h3>
+        <p>Communication, assertivité, gestion du stress</p>
+        <p class="price">650 €</p>
+      </div>
+
+      <div class="price-item">
+        <h3>Atelier d’équipe — journée</h3>
+        <p>Cohésion, intelligence collective, plan d’actions</p>
+        <p class="price">1 100 €</p>
+      </div>
+
+      <div class="price-item">
+        <h3>Programme “Cohésion & IE” — 2 jours</h3>
+        <p>Diagnostic, ateliers, engagements, suivi</p>
+        <p class="price">1 900 €</p>
+      </div>
+
+      <div class="price-item">
+        <h3>Retour au travail / prévention burnout</h3>
+        <p>Accompagnement coordonné RH–manager–collaborateur</p>
+        <span class="badge">Sur devis</span>
+      </div>
     </div>
 
-    <div class="price-item">
-      <h3>Ateliers d’équipe</h3>
-      <p>Communication, assertivité, gestion du stress, prévention du burnout, intelligence émotionnelle.</p>
-      <span class="badge">Sur devis (½ journée / journée)</span>
-    </div>
+    <p class="note" style="font-size:14px;opacity:.85;margin-top:10px;text-align:center">
+      Tarifs indicatifs HTVA. Préparation et supports inclus. Déplacements inclus dans un rayon de 30&nbsp;km autour de Manage.
+    </p>
 
-    <div class="price-item">
-      <h3>Cohésion & retours d’expérience</h3>
-      <p>Diagnostic d’équipe, mise en mouvement, engagements concrets et suivi.</p>
-      <span class="badge">Sur devis</span>
-    </div>
+    <p style="text-align:center;margin-top:16px;">
+      <a href="/contact.html" class="cta">Demander un devis</a>
+    </p>
+  </section>
+  <!-- FIN TARIFS ENTREPRISE -->
 
-    <div class="price-item">
-      <h3>Accompagnement retour au travail</h3>
-      <p>Prévention rechute, aménagements réalistes, coordination RH/manager/collaborateur.</p>
-      <span class="badge">Sur devis</span>
-    </div>
-  </div>
-
-  <p style="text-align:center;margin-top:14px;">
-    <a href="/contact.html" class="cta" style="display:inline-block;padding:12px 18px;border-radius:10px;background:#a67856;color:#fff;text-decoration:none;font-weight:700;">Demander un devis</a>
-  </p>
-</section>
   <p style="margin-top:28px;text-align:center;">
-    <a href="/contact.html" class="cta" style="display:inline-block;padding:12px 18px;border-radius:10px;background:#a67856;color:#fff;text-decoration:none;font-weight:700;">Demander une rencontre</a>
+    <a href="/contact.html" class="cta">Demander une rencontre</a>
   </p>
 </main>
 
 <footer>
-  © 2025 Harmonie Thérapie — Tous droits réservés · <a href="mailto:srhmcx@outlook.be" style="color:#6b584a;text-decoration:none;">srhmcx@outlook.be</a>
+  © 2025 Harmonie Thérapie — Tous droits réservés ·
+  <a href="mailto:srhmcx@outlook.be" style="color:#6b584a;text-decoration:none;">srhmcx@outlook.be</a>
 </footer>
 
 <script>
