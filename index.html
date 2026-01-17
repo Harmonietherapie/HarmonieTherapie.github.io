@@ -3,54 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harmonie Thérapie - Coaching</title>
+  <title>Harmonie Thérapie</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=9" />
-  <style>
-    body{margin:0;font-family:"Lato","Helvetica Neue",Arial,sans-serif;background:#f9f5f6;color:#444;line-height:1.6}
-    header{background:#e7e2dd;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-    header h1{margin:0;font-size:22px;color:#333;font-weight:600}
-    .logo-wrapper{display:flex;align-items:center;gap:10px}
-    .logo{height:34px;width:auto;border-radius:4px}
-    nav{display:flex;gap:15px}
-    nav a{text-decoration:none;color:#555;font-weight:500;transition:color .3s}
-    nav a:hover{color:#a67856}
-    .menu-toggle{display:none;flex-direction:column;cursor:pointer;background:transparent;border:0;padding:6px}
-    .menu-toggle span{background:#333;height:3px;margin:4px 0;width:25px;border-radius:3px}
-    @media (max-width:768px){
-      nav{display:none;flex-direction:column;position:absolute;top:60px;right:20px;background:#e7e2dd;padding:12px 18px;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.12);z-index:200}
-      nav a{padding:8px 0}
-      nav.active{display:flex}
-      .menu-toggle{display:flex}
-    }
 
-    section{padding:60px 20px;max-width:1000px;margin:auto}
-    section h2{font-size:26px;margin-bottom:20px;color:#333;text-align:center}
-    .hero{text-align:center;padding:80px 20px;background:#f1ece8}
-    .hero h2{font-size:32px;color:#2e2e2e}
-    .hero p{font-size:18px;max-width:760px;margin:16px auto}
-
-    /* Cartes d'accueil */
-    .cards{max-width:1100px}
-    .cards h2{margin-bottom:10px}
-    .cards-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:12px}
-    @media (min-width:760px){.cards-grid{grid-template-columns:repeat(3,1fr)}}
-    .card{background:#ffffff;border:1px solid #eadfd8;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-height:210px}
-    .tag{font-size:12px;font-weight:700;letter-spacing:.3px;display:inline-block;margin:14px 14px 0 14px;padding:6px 10px;border-radius:999px}
-    .tag-rose{background:#e9d5cf}
-    .tag-greige{background:#ded7cf}
-    .tag-menthe{background:#dceee6}
-    .card h3{margin:10px 14px 6px 14px;font-size:20px}
-    .card p{margin:0 14px 14px 14px;opacity:.9}
-    .cta{margin:10px 14px 16px 14px;display:inline-block;padding:10px 14px;border-radius:10px;background:#a67856;color:#fff;font-weight:700;text-align:center;text-decoration:none}
-    .cta:hover{filter:brightness(.95)}
-
-    /* Contact */
-    .contact-image-wrapper{text-align:center}
-    .contact-image-wrapper img{max-width:180px;height:auto;border-radius:8px}
-
-    footer{background:#e7e2dd;text-align:center;padding:20px;margin-top:40px;font-size:14px;color:#666}
-  </style>
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
 
@@ -68,84 +27,86 @@
     <a href="#accueil">Accueil</a>
     <a href="#apropos">À propos</a>
     <a href="therapie.html">Thérapie TCC</a>
-    <a href="entreprise.html">Coaching en entreprise</a>
-<a href="home-organizing.html">Home Organizing</a>
+    <a href="home-organizing.html">Home Organizing</a>
     <a href="mystery.html">Mystery Shopping</a>
     <a href="scolaire.html">Interventions scolaires</a>
-    <a href="contact.html">Contact</a>
+    <a href="#contact">Contact</a>
     <a href="rgpd.html">RGPD</a>
   </nav>
 </header>
 
-<!--  INTRO -->
-<section id="accueil" class="intro hero">
+<!-- INTRO -->
+<section id="accueil" class="hero">
   <h2>Accompagner l’humain dans toutes ses dimensions</h2>
   <p>
-    Thérapie, coaching ou formation&nbsp;: chaque rencontre est une invitation à rétablir l’équilibre entre le corps, l’esprit et les relations.
+    Thérapie, accompagnement ou formation&nbsp;: chaque rencontre est une invitation à rétablir l’équilibre entre le corps, l’esprit et les relations.
   </p>
   <p>
-    J’accompagne les enfants, les adultes et les Managers à mieux se comprendre, à trouver des outils concrets et à créer un cadre de vie ou de travail plus apaisé.
+    J’accompagne les enfants, les adultes et les couples à mieux se comprendre, à trouver des outils concrets et à créer un cadre de vie ou d’apprentissage plus apaisé.
   </p>
 </section>
 
-<!-- 🧭 CARTES DE NAVIGATION -->
+<!-- CARTES -->
 <section class="cards" aria-labelledby="choix">
   <h2 id="choix">Choisissez votre besoin</h2>
+
   <div class="cards-grid">
     <article class="card">
       <span class="tag tag-rose">Thérapie</span>
-      <h3>Thérapie Cognitive & Comportementale</h3>
-      <p>Suivi pour enfants, adultes et couples. Accompagnement Post-Partum, Burn Out,...
-        Approche bienveillante et outils concrets.</p>
+      <h3>Thérapie Cognitive &amp; Comportementale</h3>
+      <p>
+        Suivi pour enfants, adultes et couples. Accompagnement Post-Partum, Burn Out,...
+        Approche bienveillante et outils concrets.
+      </p>
       <a class="cta" href="therapie.html">Découvrir</a>
     </article>
 
     <article class="card">
       <span class="tag tag-greige">Entreprises</span>
-      <h3>Mystery Shopping & coaching d’équipe</h3>
+      <h3>Mystery Shopping &amp; coaching d’équipe</h3>
       <p>Visites mystères, restitution claire et plan d’actions. Développement des équipes sur le terrain.</p>
       <a class="cta" href="mystery.html">Découvrir</a>
     </article>
 
     <article class="card">
       <span class="tag tag-menthe">Éducation</span>
-      <h3>Interventions scolaires/neuroatypies</h3>
+      <h3>Interventions scolaires / neuroatypies</h3>
       <p>Sensibilisation TDAH, HPI, DYS, outils prêts à l’emploi pour la classe, formats flexibles.</p>
       <a class="cta" href="scolaire.html">Découvrir</a>
     </article>
+
     <article class="card">
-  <span class="tag tag-greige">Managers</span>
-  <h3>Coaching en entreprise</h3>
-  <p>Accompagnement des dirigeants et managers pour développer un leadership bienveillant, prévenir le burnout et renforcer la cohésion d’équipe.</p>
-  <a class="cta" href="entreprise.html">Découvrir</a>
-</article>
-
-<article class="card">
-  <span class="tag tag-menthe">Organisation</span>
-  <h3>Home Organizing</h3>
-  <p>Remettre de l’ordre dans son intérieur et son esprit : tri, rangement et routines apaisantes pour un quotidien plus fluide et serein.</p>
-  <a class="cta" href="home-organizing.html">Découvrir</a>
-</article>
-
+      <span class="tag tag-menthe">Organisation</span>
+      <h3>Home Organizing</h3>
+      <p>Tri, rangement et routines apaisantes pour un quotidien plus fluide et serein.</p>
+      <a class="cta" href="home-organizing.html">Découvrir</a>
+    </article>
   </div>
 </section>
 
-<!--  À PROPOS -->
+<!-- À PROPOS -->
 <section id="apropos">
   <h2>À propos</h2>
   <p>Je suis <strong>Sarah Michaux</strong>, thérapeute et consultante, passionnée par l’humain sous toutes ses facettes.</p>
-  <p>Au fil de mon parcours, j’ai choisi d’unir mes compétences en <strong>thérapie cognitive et comportementale (TCC)</strong>, en <strong>coaching managérial</strong> et en <strong>intervention scolaire</strong> autour d’un même fil conducteur&nbsp;: <em>l’harmonie</em>.</p>
-  <p>J’accompagne les enfants, les adultes et les couples à travers la thérapie, les entreprises par le biais du <strong>Mystery Shopping et du coaching d’équipe</strong>, et les écoles via des <strong>formations autour de la neuroatypie</strong>.</p>
-  <p>Mon approche est à la fois <strong>bienveillante, structurée et pragmatique</strong> : chaque accompagnement se veut concret, humain et adapté à la réalité du terrain.</p>
-  <p style="text-align:center;font-style:italic;color:#6b584a;margin-top:30px;">Ma mission&nbsp;: aider chacun — individu, équipe ou institution — à retrouver clarté, équilibre et confiance en ses propres ressources.</p>
+  <p>
+    Au fil de mon parcours, j’ai choisi d’unir mes compétences en
+    <strong>thérapie cognitive et comportementale (TCC)</strong> et en
+    <strong>intervention scolaire</strong> autour d’un même fil conducteur&nbsp;: <em>l’harmonie</em>.
+  </p>
+  <p>
+    J’accompagne les enfants, les adultes et les couples à travers la thérapie,
+    les entreprises via le <strong>Mystery Shopping et le coaching d’équipe</strong>,
+    et les écoles avec des <strong>formations autour de la neuroatypie</strong>.
+  </p>
+  <p>Mon approche est <strong>bienveillante, structurée et pragmatique</strong> : du concret, de l’humain, et du sur-mesure.</p>
+  <p class="mission">Ma mission&nbsp;: aider chacun — individu, équipe ou institution — à retrouver clarté, équilibre et confiance en ses propres ressources.</p>
 </section>
 
-<!-- 📞 CONTACT -->
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p class="contact-description" style="text-align:center;max-width:720px;margin:0 auto 18px;">
+  <p class="contact-description">
     Vous souhaitez échanger ? Écrivez-moi ou réservez un créneau.
-
   </p>
 
   <div class="contact-image-wrapper">
@@ -153,23 +114,22 @@
   </div>
 
   <div class="calendly-inline-widget"
-       data-url="https://calendly.com/srhmichaux/30min?back=1&month=2025-10&locale=fr"
+       data-url="https://calendly.com/srhmichaux/30min?back=1&locale=fr"
        style="min-width:320px;height:700px;">
   </div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-  <p style="text-align:center;margin-top:20px;">
-    <a href="https://calendly.com/srhmichaux/30min?locale=fr" target="_blank"
-       style="padding:10px 20px;background:#c5b8a5;color:#fff;text-decoration:none;border-radius:5px;">
-       Réserver via Calendly
+  <p class="contact-cta">
+    <a href="https://calendly.com/srhmichaux/30min?locale=fr" target="_blank" rel="noopener">
+      Réserver via Calendly
     </a>
   </p>
 </section>
 
-<footer>
-  © 2025 Harmonie Thérapie — Tous droits réservés<br>
-  <a href="mailto:srhmcx@outlook.be" style="color:#6b584a;text-decoration:none;">srhmcx@outlook.be</a> ·
-  <a href="rgpd.html" style="color:#6b584a;text-decoration:none;">Politique RGPD</a>
+<footer class="site-footer">
+  © 2025 Harmonie Thérapie — Tous droits réservés<br />
+  <a href="mailto:srhmcx@outlook.be">srhmcx@outlook.be</a> ·
+  <a href="rgpd.html">Politique RGPD</a>
 </footer>
 
 <script>
@@ -183,6 +143,7 @@
 
 </body>
 </html>
+
 
 
 
