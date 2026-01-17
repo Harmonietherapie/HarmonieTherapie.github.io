@@ -1,331 +1,298 @@
-/* Police principale du site */
-body {
-    font-family: 'Lato', Arial, sans-serif;
-    font-weight: 400; /* Texte par défaut */
-    line-height: 1.6; /* Améliore la lisibilité */
+/* =========================
+   Harmonie Thérapie - CSS
+   ========================= */
+
+/* Base */
+:root{
+  --bg: #f9f5f6;
+  --bg-soft: #f1ece8;
+  --header: #e7e2dd;
+  --text: #444;
+  --title: #2e2e2e;
+  --accent: #a67856;
+  --border: #eadfd8;
+  --shadow: 0 10px 24px rgba(0,0,0,.12);
 }
 
-/* Titres */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', Arial, sans-serif;
-    font-weight: 700; /* Gras pour bien distinguer les titres */
-    line-height: 1.3;
-}
+*{ box-sizing: border-box; }
 
-/* Paragraphes */
-p {
-    font-family: 'Lato', Arial, sans-serif;
-    font-weight: 400;
-}
-
-.contact-photo {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #f7f2ee;
-  color: #333;
-}
-
-.contact-photo h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.contact-photo p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+body{
+  margin:0;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 400;
   line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
 }
 
-.contact-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Ajouté pour aligner les éléments verticalement */
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--title);
+  margin: 0 0 12px;
 }
 
-.contact-image-wrapper img {
-  width: 180px;             /* agrandit légèrement l’encart */
-  height: 180px;
-  object-fit: cover;
-  object-position: center 30%; /* recentre le cadrage */
+p{ margin: 0 0 14px; }
+
+/* Header */
+.site-header{
+  background: var(--header);
+  padding: 15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-wrapper{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.site-header h1{
+  margin:0;
+  font-size: 22px;
+  font-weight: 600;
+  color:#333;
+}
+
+/* Logo rond */
+.logo{
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transform: scale(0.70);   /* <--- dézoom léger */
-  transform-origin: center; /* garde le centrage */
-}
-.contact-description {
-  text-align: center;
-  margin-bottom: 20px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  display:block;
+  flex-shrink: 0;
 }
 
-/* ----- LOGO + NOM DU SITE ----- */
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* espace entre le logo et le texte */
-}
-
-/* Logo rond – même rendu desktop & mobile */
-.logo {
-  width: 60px !important;
-  height: 60px !important;   /* garde le format carré */
-  border-radius: 50%;
-  object-fit: contain;       /* logo entier */
-  background-color: #fff;    /* marges blanches internes */
-  padding: 6px;              /* espace blanc autour du dessin */
-  box-sizing: border-box;    /* le padding reste dans le cercle */
-  display: block;
-  flex-shrink: 0;            /* ne rétrécit pas dans le flex du header */
-}
-
-/* Option mobile : encore plus d’air si tu veux */
-@media (max-width: 640px) {
-  .logo {
-    width: 56px !important;
-    height: 56px !important;
-    padding: 8px;            /* ↑ marges blanches sur mobile */
+@media (max-width: 640px){
+  .logo{
+    width: 56px;
+    height: 56px;
+    padding: 8px;
   }
 }
-/* --- Tarifs (pricing) --- */
-#services h3#tarifs {
-  margin-top: 28px;
-  font-size: 22px;
-  color: #333;
-  text-align: center;
+
+/* Nav */
+nav{
+  display:flex;
+  gap: 15px;
 }
 
-.pricing {
-  background: #f7f4f1;          /* beige doux */
-  border: 1px solid #e7e1db;
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 600px;             /* largeur max du bloc */
-  margin: 20px auto;            /* centre le bloc */
-  text-align: center;
-}
-
-.pricing .group {
-  padding: 12px 0;
-  border-top: 1px dashed #e2d8cf;
-}
-.pricing .group:first-of-type {
-  border-top: none;
-  padding-top: 0;
-}
-
-.pricing h4 {
-  margin: 15px 0 10px;
-  font-size: 18px;
-  color: #2a2a2a;
-}
-
-.pricing .row {
-  display: flex;
-  justify-content: space-between;
-  max-width: 400px;             /* largeur du tableau interne */
-  margin: 6px auto;             /* centre chaque ligne */
-  text-align: left;
-}
-
-.pricing .row span {
-  color: #444;
-}
-.pricing .row strong {
-  color: #222;
-}
-
-.pricing .notes {
-  margin: 16px auto 0;
-  font-size: 13px;
-  color: #6f6f6f;
-  max-width: 450px;
-}
-
-#services h3#tarifs {
-  margin-top: 28px;
-  font-size: 22px;
-  color: #333;
-  text-align: center;
-  border-bottom: 2px solid #e7e1db;
-  display: inline-block;   /* la ligne ne fait que la largeur du texte */
-  padding-bottom: 5px;
-}
-/* Centre le titre "Tarifs 2024–2025" */
-#services h3#tarifs{
-  max-width: 600px;          /* même largeur que .pricing */
-  margin: 28px auto 12px;    /* centre le bloc du titre */
-  text-align: center;        /* centre le texte à l'intérieur */
-  /* option déco :
-  border-bottom: 2px solid #e7e1db;
-  padding-bottom: 5px;
-  */
-}
-/* Titre Tarifs centré */
-#services h3#tarifs {
-  max-width: 600px;
-  display: block;
-  margin: 28px auto 12px;
-  text-align: center;
-}
-/* Bloc d’accueil (hero) */
-#accueil {
-  text-align: center;
-  padding: 60px 20px;      /* espace autour, aère le texte */
-  max-width: 900px;        /* limite la largeur */
-  margin: 0 auto;          /* centre sur la page */
-}
-
-/* Titre d’accueil */
-#accueil h2 {
-  font-size: 1.8em;        /* moins gros que maintenant */
-  font-weight: 600;        /* un peu moins gras */
-  margin-bottom: 20px;     /* espace sous le titre */
-  color: #333;             /* couleur douce */
-}
-
-/* Paragraphe d’accueil */
-#accueil p {
-  font-size: 1.05em;       /* texte légèrement plus petit */
-  line-height: 1.7;        /* plus d’espace entre les lignes */
-  color: #555;             /* gris doux */
-  margin: 0 auto;
-  max-width: 700px;        /* pas de pavé trop large */
-}
-/* HERO plus doux */
-#accueil, section#accueil {
-  text-align: center !important;
-  padding: 60px 20px !important;
-  max-width: 900px !important;
-  margin: 0 auto !important;
-}
-
-#accueil h1, #accueil h2 {
-  font-size: 1.8em !important;
-  font-weight: 600 !important;
-  margin-bottom: 20px !important;
-  color: #333 !important;
-}
-
-#accueil p {
-  font-size: 1.05em !important;
-  line-height: 1.7 !important;
-  color: #555 !important;
-  max-width: 700px !important;
-  margin: 0 auto !important;
-}
-/* Affinage du bloc d’accueil */
-#accueil {
-  background: #f6f3f0;          /* beige très clair */
-  border: 1px solid #e8e0d9;
-  border-radius: 14px;
-  box-shadow: 0 1px 8px rgba(0,0,0,.04);
-  padding: 36px 24px;
-  max-width: 900px;
-  margin: 22px auto;            /* centre + ajoute de l’air autour */
-}
-
-#accueil h2 {
-  font-size: 1.6em;             /* un peu plus discret */
-  font-weight: 500;             /* moins gras */
-  letter-spacing: .2px;
-  color: #2f2f2f;
-  margin: 0 0 14px;
-}
-
-#accueil p {
-  font-size: 1.02em;
-  line-height: 1.75;
-  color: #525252;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Mobile : adoucir encore un peu */
-@media (max-width: 640px){
-  #accueil { padding: 28px 18px; margin: 16px auto; }
-  #accueil h2 { font-size: 1.4em; }
-  #accueil p { font-size: 1em; line-height: 1.7; }
-}
-/* Recentrer le titre + le bloc tarifs */
-#services h3#tarifs{
-  max-width: 600px;
-  display: block;
-  margin: 28px auto 12px !important; /* centre le titre */
-  text-align: center !important;
-}
-#services .pricing{
-  margin: 20px auto !important;      /* centre le bloc tarifs */
-}
-/* Centre le titre "Tarifs 2024–2025" de manière robuste */
-#services { text-align: center; }                 /* centre le contenu direct du bloc services */
-#services h3#tarifs {
-  display: inline-block;                          /* prend juste la largeur du texte */
-  margin: 28px auto 12px !important;              /* espace + centrage */
-  text-align: center !important;
-}
-/* Limiter la largeur du texte et centrer */
-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Espacement entre paragraphes */
-section p {
-  margin-bottom: 1.2em;
-  line-height: 1.6;
-}
-
-/* Mise en valeur des phrases clés */
-section p em {
-  font-style: italic;
-  color: #6b5b95; /* un ton doux (violet/gris/beige selon ta charte) */
-}
-
-/* Titre de section */
-section h2 {
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-/* --- Personnalisation sections et texte --- */
-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #f9f8f6; /* gris beige doux */
-  border-radius: 8px; /* coins légèrement arrondis */
-}
-
-/* Paragraphes */
-section p {
-  margin-bottom: 1.2em;
-  line-height: 1.6;
-  color: #5a5352; /* gris taupe pour texte */
-}
-
-/* Mise en valeur phrases clés */
-section p em {
-  font-style: italic;
-  color: #f2b6c8; /* rose clair barbapapa */
+nav a{
+  text-decoration:none;
+  color:#555;
   font-weight: 500;
+  transition: color .2s ease;
 }
 
-/* Titres de section */
-section h2 {
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #f7d9e3; /* rose fleur de cerisier */
-  text-align: center;
+nav a:hover{ color: var(--accent); }
+
+/* Burger */
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  background: transparent;
+  border: 0;
+  padding: 6px;
 }
 
-section {
-  max-width: 800px;
+.menu-toggle span{
+  background:#333;
+  height:3px;
+  margin:4px 0;
+  width:25px;
+  border-radius:3px;
+}
+
+@media (max-width: 768px){
+  nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--header);
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 200;
+  }
+
+  nav a{ padding: 8px 0; }
+  nav.active{ display:flex; }
+  .menu-toggle{ display:flex; }
+}
+
+/* Layout sections */
+section{
+  padding: 60px 20px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 30px;
-  background-color: #fcf4ef; /* gris-beige rosé chaleureux */
-  border-radius: 8px;
+}
+
+section h2{
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding: 80px 20px;
+  background: var(--bg-soft);
+  max-width: none;
+}
+
+.hero h2{
+  font-size: 32px;
+  color: var(--title);
+}
+
+.hero p{
+  font-size: 18px;
+  max-width: 760px;
+  margin: 16px auto;
+}
+
+/* Cards */
+.cards{
+  max-width: 1100px;
+}
+
+.cards h2{
+  margin-bottom: 10px;
+}
+
+.cards-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+@media (min-width: 760px){
+  .cards-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card{
+  background:#fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height: 210px;
+}
+
+.tag{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  display:inline-block;
+  margin: 14px 14px 0 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.tag-rose{ background:#e9d5cf; }
+.tag-greige{ background:#ded7cf; }
+.tag-menthe{ background:#dceee6; }
+
+.card h3{
+  margin: 10px 14px 6px 14px;
+  font-size: 20px;
+}
+
+.card p{
+  margin: 0 14px 14px 14px;
+  opacity: .9;
+}
+
+.cta{
+  margin: 10px 14px 16px 14px;
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color:#fff;
+  font-weight: 700;
+  text-align:center;
+  text-decoration:none;
+}
+
+.cta:hover{ filter: brightness(.95); }
+
+/* À propos */
+.mission{
+  text-align:center;
+  font-style: italic;
+  color:#6b584a;
+  margin-top: 26px;
+}
+
+/* Contact */
+.contact-description{
+  text-align:center;
+  max-width: 720px;
+  margin: 0 auto 18px;
+}
+
+.contact-image-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+}
+
+.contact-image-wrapper img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: scale(0.70);
+  transform-origin: center;
+}
+
+.contact-cta{
+  text-align:center;
+  margin-top: 20px;
+}
+
+.contact-cta a{
+  display:inline-block;
+  padding: 10px 20px;
+  background: #c5b8a5;
+  color:#fff;
+  text-decoration:none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Footer */
+.site-footer{
+  background: var(--header);
+  text-align:center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  color:#666;
+}
+
+.site-footer a{
+  color:#6b584a;
+  text-decoration:none;
 }
