@@ -283,3 +283,7 @@ section h2{
   color:#6b584a;
   text-decoration:none;
 }
+.contact-description .contact-line{
+  display: block;
+  margin: 6px 0; /* ajuste l’espace entre les lignes */
+}
