@@ -287,3 +287,37 @@ section h2{
   display: block;
   margin: 6px 0; /* ajuste l’espace entre les lignes */
 }
+.tarifs-section {
+  padding: 30px 20px;
+}
+
+.tarifs-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #2f2f35;
+}
+
+.tarif-card {
+  background: #ffffff;
+  border: 1px solid #e8dcd5;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.tarif-card h3 {
+  margin-bottom: 10px;
+  color: #2f2f35;
+}
+
+.tarif-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.tarif-card strong {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #b07a55;
+}
