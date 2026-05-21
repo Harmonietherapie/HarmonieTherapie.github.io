@@ -321,3 +321,34 @@ section h2{
   font-size: 1.2rem;
   color: #b07a55;
 }
+/* Correction mise en page bas de page */
+#apropos,
+#contact {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  display: block;
+}
+
+#apropos p,
+#contact p {
+  max-width: 650px;
+  margin: 14px auto;
+  line-height: 1.7;
+}
+
+#contact iframe,
+#contact .calendly-inline-widget {
+  margin: 30px auto;
+  display: block;
+  max-width: 100%;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto 20px auto;
+  padding: 20px;
+}
