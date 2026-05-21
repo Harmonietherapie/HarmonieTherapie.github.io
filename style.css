@@ -352,3 +352,32 @@ footer {
   margin: 50px auto 20px auto;
   padding: 20px;
 }
+/* Correction affichage desktop : sections empilées */
+#apropos,
+#contact,
+footer {
+  width: 100%;
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  display: block;
+  float: none;
+  clear: both;
+}
+
+#apropos {
+  margin-top: 80px;
+}
+
+#contact iframe,
+#contact .calendly-inline-widget {
+  display: block;
+  margin: 30px auto;
+  max-width: 100%;
+}
+
+footer {
+  margin-top: 40px;
+  background: #e7e2dd;
+}
