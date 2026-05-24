@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  <title>Boutique – Harmonie</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f9f5f1;
+      margin:0;
+      padding:0;
+      color:#333;
+    }
+
+    .hero{
+      background:#1f2d45;
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      line-height:1.7;
+    }
+
+    .products{
+      max-width:1200px;
+      margin:60px auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      padding:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+      text-align:center;
+    }
+
+    .card-content h2{
+      color:#1f2d45;
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:1.4rem;
+      font-weight:bold;
+      margin-bottom:15px;
+      color:#c49b7a;
+    }
+
+    .card-content p{
+      line-height:1.6;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#1f2d45;
+      color:white;
+      padding:14px 24px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .btn:hover{
+      opacity:0.9;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <h1>La Boutique Harmonie</h1>
+
+    <p>
+      Découvrez les coffrets, packs et articles disponibles à la réservation.
+      Retrait à Manage ou envoi postal possible.
+    </p>
+
+  </section>
+
+  <section class="products">
+
+    <div class="card">
+
+      <img src="PHOTO1.jpg" alt="Coffret">
+
+      <div class="card-content">
+
+        <h2>Coffret Bien-être</h2>
+
+        <div class="price">25€</div>
+
+        <p>
+          Un coffret cocooning pensé pour offrir un moment de douceur et de détente.
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSflsNoLMtJCF2UlVfEKQHjST59MNuJGbORAlBVZIVC0f6DHGQ/viewform?usp=sharing"
+           class="btn"
+           target="_blank">
+
+           Réserver
+
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
