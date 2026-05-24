@@ -381,38 +381,3 @@ footer {
   margin-top: 40px;
   background: #e7e2dd;
 }
-.reservation-box {
-    background: #f8f1eb;
-    padding: 40px;
-    border-radius: 25px;
-    text-align: center;
-    margin: 60px auto;
-    max-width: 900px;
-}
-
-.reservation-box h2 {
-    color: #1f2d45;
-    margin-bottom: 15px;
-    font-size: 2rem;
-}
-
-.reservation-box p {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
-
-.reservation-btn {
-    display: inline-block;
-    background: #1f2d45;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.reservation-btn:hover {
-    opacity: 0.9;
-}
