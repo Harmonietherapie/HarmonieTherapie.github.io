@@ -417,3 +417,31 @@ footer {
     }
 
 }
+.product-card{
+    display:flex !important;
+    align-items:center !important;
+    gap:40px !important;
+}
+
+.product-gallery{
+    width:380px !important;
+    height:280px !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+    flex-shrink:0 !important;
+}
+
+.product-gallery img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    border-radius:20px !important;
+    display:block !important;
+}
+
+.product-info{
+    flex:1 !important;
+    position:relative !important;
+    z-index:5 !important;
+}
