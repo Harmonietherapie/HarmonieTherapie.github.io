@@ -499,3 +499,53 @@ footer {
     text-decoration: none;
     font-weight: 600;
 }
+/* Témoignages */
+
+.temoignages {
+  padding: 60px 20px;
+  background: #faf7f4;
+  text-align: center;
+}
+
+.temoignages h2 {
+  margin-bottom: 10px;
+  color: #5f5a57;
+}
+
+.intro-temoignages {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  color: #7a7470;
+  font-size: 1rem;
+}
+
+.temoignages-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.temoignage-card {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid #eee2dc;
+  text-align: left;
+}
+
+.temoignage-card p {
+  margin: 0;
+  color: #5f5a57;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.temoignage-card span {
+  display: block;
+  margin-top: 16px;
+  color: #8d7770;
+  font-weight: 600;
+}
