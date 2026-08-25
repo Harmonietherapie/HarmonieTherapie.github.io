@@ -548,4 +548,150 @@ footer {
   margin-top: 16px;
   color: #8d7770;
   font-weight: 600;
+}/* ===== INTRO UNIVERS D'HARMONIE ===== */
+
+.universe-intro {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 70px 30px;
+  color: #3f3835;
 }
+
+.universe-heading {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.universe-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a67856;
+}
+
+.universe-heading h1 {
+  margin: 0 0 20px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.universe-heading h1 span {
+  color: #a67856;
+  font-weight: 400;
+}
+
+.universe-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #666;
+}
+
+
+/* LES 4 ENCARTS */
+
+.universe-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.universe-card {
+  background: #f9f5f6;
+  border: 1px solid #eadfd8;
+  border-radius: 16px;
+  padding: 28px 24px;
+  min-height: 190px;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.universe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.universe-card h3 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #333;
+}
+
+.universe-card h3::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 1px;
+  margin-top: 12px;
+  background: #a67856;
+}
+
+.universe-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #666;
+}
+
+.universe-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.universe-footer p {
+  margin: 0;
+  font-size: 15px;
+  font-style: italic;
+  color: #8d7066;
+}
+
+
+/* TABLETTE */
+
+@media (max-width: 950px) {
+
+  .universe-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* SMARTPHONE */
+
+@media (max-width: 600px) {
+
+  .universe-intro {
+    padding: 45px 18px;
+  }
+
+  .universe-heading {
+    margin-bottom: 30px;
+  }
+
+  .universe-heading h1 {
+    font-size: 30px;
+  }
+
+  .universe-heading p {
+    font-size: 16px;
+  }
+
+  .universe-services {
+    grid-template-columns: 1fr;
+  }
+
+  .universe-card {
+    min-height: auto;
+  }
+
+}
+
