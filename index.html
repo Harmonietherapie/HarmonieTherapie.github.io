@@ -37,36 +37,213 @@
 </header>
 
 <!-- INTRO -->
-<section id="accueil" class="hero">
+<section class="universe-intro">
 
-# Bienvenue dans L’Univers d’Harmonie Thérapie
+  <div class="universe-heading">
+    <span class="universe-label">L’Univers d’Harmonie Thérapie</span>
 
-**Plusieurs accompagnements, un même objectif : vous aider à retrouver un équilibre plus harmonieux, dans votre vie personnelle comme professionnelle.**
+    <h1>Plusieurs accompagnements,<br>
+    <span>un même objectif : retrouver votre équilibre.</span></h1>
 
-L’Univers d’Harmonie Thérapie rassemble différents services destinés aux enfants, aux adultes, aux couples, aux familles, mais aussi aux professionnels et aux entreprises.
+    <p>
+      Des accompagnements concrets et personnalisés pour les enfants,
+      les adultes, les familles et les professionnels,
+      à la maison comme au travail.
+    </p>
+  </div>
 
-**TDAH & neurodivergence**
-Comprendre son fonctionnement, mettre en place des stratégies adaptées et retrouver des repères concrets au quotidien.
+  <div class="universe-services">
 
-**Accompagnement scolaire**
-Identifier les difficultés rencontrées par l’enfant ou l’adolescent et l’accompagner dans la mise en place de méthodes, d’outils et d’aménagements adaptés à ses besoins.
+    <div class="universe-card">
+      <h3>TDAH & neurodivergence</h3>
+      <p>
+        Comprendre son fonctionnement et mettre en place
+        des stratégies adaptées au quotidien.
+      </p>
+    </div>
 
-**Coaching personnel, couple & famille**
-Prendre du recul sur une situation, comprendre ce qui se joue et construire des solutions concrètes pour avancer individuellement ou ensemble.
+    <div class="universe-card">
+      <h3>Accompagnement scolaire</h3>
+      <p>
+        Méthodes, organisation et outils adaptés
+        aux besoins de l’enfant ou de l’adolescent.
+      </p>
+    </div>
 
-**Organisation du quotidien & de la maison**
-Retrouver un environnement plus fonctionnel et plus serein grâce au home organizing et à des méthodes adaptées à votre réalité.
+    <div class="universe-card">
+      <h3>Coaching personnel, couple & famille</h3>
+      <p>
+        Prendre du recul, comprendre ce qui se joue
+        et construire des solutions concrètes.
+      </p>
+    </div>
 
-**Coaching professionnel, coaching managérial & management**
-Accompagner les professionnels, les managers et les entreprises dans leurs problématiques de terrain : prise de fonction, posture managériale, leadership, communication, organisation, gestion d’équipe, gestion des conflits et développement des compétences.
+    <div class="universe-card">
+      <h3>Coaching & consultance en management</h3>
+      <p>
+        Management, leadership, communication,
+        organisation, conflits et accompagnement des équipes.
+      </p>
+    </div>
 
-Des **coachings managériaux individuels**, des formations, de la consultance ainsi que des **mystery visits** peuvent également être proposés afin d’observer les réalités du terrain, identifier les forces et les axes d’amélioration et mettre en place des solutions concrètes et adaptées.
+    <div class="universe-card">
+      <h3>Organisation du quotidien & de la maison</h3>
+      <p>
+        Désencombrer, structurer et retrouver
+        un environnement plus fonctionnel et serein.
+      </p>
+    </div>
 
-**La Boutique d’Harmonie**
-Une sélection de senteurs et de produits pour prendre soin de son intérieur et créer un environnement dans lequel on se sent bien.
+    <div class="universe-card">
+      <h3>La Boutique d’Harmonie</h3>
+      <p>
+        Senteurs, parfums et produits sélectionnés
+        pour prendre soin de soi et de son intérieur.
+      </p>
+    </div>
 
-Parce que l’équilibre ne concerne pas qu’un seul aspect de notre vie, **L’Univers d’Harmonie Thérapie propose différentes portes d’entrée pour trouver l’accompagnement qui correspond à votre situation, à vos besoins et à votre quotidien.**
+  </div>
 
+  <div class="universe-footer">
+    <p>
+      Un même univers, différentes portes d’entrée,
+      selon votre situation et vos besoins.
+    </p>
+  </div>
+
+</section>
+
+<style>
+
+.universe-intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 30px;
+  font-family: inherit;
+  color: #3f3835;
+}
+
+.universe-heading {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.universe-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b78980;
+}
+
+.universe-heading h1 {
+  margin: 0 0 22px;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.2;
+  font-weight: 400;
+  color: #342e2b;
+}
+
+.universe-heading h1 span {
+  color: #b27e75;
+  font-weight: 300;
+}
+
+.universe-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6d6460;
+}
+
+.universe-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.universe-card {
+  background: #faf7f5;
+  border: 1px solid #eee4df;
+  border-radius: 18px;
+  padding: 30px 26px;
+  min-height: 175px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.universe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(70, 55, 50, 0.08);
+}
+
+.universe-card h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #4c3f3a;
+}
+
+.universe-card h3::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin-top: 13px;
+  background: #c9a49c;
+}
+
+.universe-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #706763;
+}
+
+.universe-footer {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.universe-footer p {
+  margin: 0;
+  font-size: 15px;
+  font-style: italic;
+  color: #9a7770;
+}
+
+@media (max-width: 900px) {
+
+  .universe-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .universe-intro {
+    padding: 55px 20px;
+  }
+
+  .universe-services {
+    grid-template-columns: 1fr;
+  }
+
+  .universe-heading {
+    margin-bottom: 38px;
+  }
+
+  .universe-card {
+    min-height: auto;
+  }
+
+}
+
+</style>
 </section>
 <!-- TEMOIGNAGES -->
 <section class="temoignages">
