@@ -858,4 +858,9 @@ footer {
   font-size: 15px;
   line-height: 1.7;
 }
-
+.tarif-coaching {
+  font-size: 0.82rem;
+  color: #8d7770;
+  margin: 8px 0 18px;
+  font-style: italic;
+}
