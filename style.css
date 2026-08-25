@@ -845,3 +845,17 @@ footer {
 .universe-link:hover {
   color: #8d6044;
 }
+.about-mini {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px 30px 50px;
+  text-align: center;
+}
+
+.about-mini p {
+  margin: 0;
+  color: #6d6460;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
